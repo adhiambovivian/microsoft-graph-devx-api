@@ -768,7 +768,7 @@ namespace CodeSnippetsReflection.LanguageGenerators
         }
 
         /// <summary>
-        /// Generates CollectionPage class name
+        /// Generates CollectionWithReferencesPage class name
         /// </summary>
         /// <param name="pathSegment">The OdataPathSegment in use</param>
         /// <param name="path">path in edm model</param>
@@ -777,7 +777,7 @@ namespace CodeSnippetsReflection.LanguageGenerators
         {
             var type = GetCsharpClassName(pathSegment, path.ToList().GetRange(0, path.Count - 1));
             var property = CommonGenerator.UppercaseFirstLetter(path.Last());
-            return $"{type}{property}CollectionPage";
+            return $"{type}{property}CollectionWithReferencesPage";
         }
 
         /// <summary>
